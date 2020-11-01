@@ -1,5 +1,6 @@
 *** Settings ***
 Documentation    Suite description
+Library          SeleniumLibrary
 
 *** Variables ***
 ${BROWSER}        chrome
@@ -16,7 +17,7 @@ Open site and navigate to online shop
 
 *** Keywords ***
 Begin Web Test
-    Open Browser    ${BROWSER}
+    Open Browser    about:blank     ${BROWSER}
 
 Go to online store
     Go To    ${URL}
