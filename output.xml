@@ -1,102 +1,114 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 3.2.2 (Python 3.7.6 on darwin)" generated="20201101 15:53:09.442" rpa="false">
-<suite id="s1" name="trueStore purchase test" source="/Users/coolwebs/www/Python Projects/ecomRobo/Tests/trueStore_purchase_test.robot">
-<test id="s1-t1" name="Open site and navigate to online shop">
+<robot generator="Robot 3.2.2 (Python 3.7.6 on darwin)" generated="20201101 16:30:39.056" rpa="false">
+<suite id="s1" name="trueStore purchase test 2" source="/Users/coolwebs/www/Python Projects/ecomRobo/Tests/trueStore_purchase_test_2.robot">
+<test id="s1-t1" name="Add item from store to cart">
+<kw name="Begin Web Test">
 <kw name="Open Browser" library="SeleniumLibrary">
 <doc>Opens a new browser instance to the optional ``url``.</doc>
 <arguments>
-<arg>${URL}</arg>
+<arg>about:blank</arg>
 <arg>${BROWSER}</arg>
 </arguments>
-<msg timestamp="20201101 15:53:09.968" level="INFO">Opening browser 'chrome' to base url 'https://truemoveh.truecorp.co.th'.</msg>
-<status status="PASS" starttime="20201101 15:53:09.968" endtime="20201101 15:53:16.468"></status>
+<msg timestamp="20201101 16:30:39.366" level="INFO">Opening browser 'chrome' to base url 'about:blank'.</msg>
+<status status="PASS" starttime="20201101 16:30:39.366" endtime="20201101 16:30:42.681"></status>
+</kw>
+<status status="PASS" starttime="20201101 16:30:39.366" endtime="20201101 16:30:42.737"></status>
+</kw>
+<kw name="Go to online store">
+<kw name="Go To" library="SeleniumLibrary">
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<arguments>
+<arg>${URL}</arg>
+</arguments>
+<msg timestamp="20201101 16:30:42.740" level="INFO">Opening url 'https://truemoveh.truecorp.co.th'</msg>
+<status status="PASS" starttime="20201101 16:30:42.739" endtime="20201101 16:30:45.233"></status>
 </kw>
 <kw name="Maximize Browser Window" library="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" starttime="20201101 15:53:16.471" endtime="20201101 15:53:16.902"></status>
+<status status="PASS" starttime="20201101 16:30:45.234" endtime="20201101 16:30:45.525"></status>
 </kw>
 <kw name="Wait Until Page Contains" library="SeleniumLibrary">
 <doc>Waits until ``text`` appears on the current page.</doc>
 <arguments>
 <arg>สั่งซื้อออนไลน์</arg>
 </arguments>
-<status status="PASS" starttime="20201101 15:53:16.903" endtime="20201101 15:53:17.083"></status>
+<status status="PASS" starttime="20201101 16:30:45.525" endtime="20201101 16:30:45.673"></status>
 </kw>
 <kw name="Mouse Over" library="SeleniumLibrary">
 <doc>Simulates hovering the mouse over the element ``locator``.</doc>
 <arguments>
 <arg>xpath=/html/body/section[1]/header/nav/nav/ul/li[4]/a</arg>
 </arguments>
-<msg timestamp="20201101 15:53:17.085" level="INFO">Simulating Mouse Over on element 'xpath=/html/body/section[1]/header/nav/nav/ul/li[4]/a'.</msg>
-<status status="PASS" starttime="20201101 15:53:17.084" endtime="20201101 15:53:17.465"></status>
+<msg timestamp="20201101 16:30:45.675" level="INFO">Simulating Mouse Over on element 'xpath=/html/body/section[1]/header/nav/nav/ul/li[4]/a'.</msg>
+<status status="PASS" starttime="20201101 16:30:45.674" endtime="20201101 16:30:46.226"></status>
 </kw>
 <kw name="Click Link" library="SeleniumLibrary">
 <doc>Clicks a link identified by ``locator``.</doc>
 <arguments>
 <arg>xpath=/html/body/section[1]/header/nav/nav/ul/li[4]/div/ul/li[1]/a</arg>
 </arguments>
-<msg timestamp="20201101 15:53:17.468" level="INFO">Clicking link 'xpath=/html/body/section[1]/header/nav/nav/ul/li[4]/div/ul/li[1]/a'.</msg>
-<status status="PASS" starttime="20201101 15:53:17.466" endtime="20201101 15:53:18.052"></status>
+<msg timestamp="20201101 16:30:46.228" level="INFO">Clicking link 'xpath=/html/body/section[1]/header/nav/nav/ul/li[4]/div/ul/li[1]/a'.</msg>
+<status status="PASS" starttime="20201101 16:30:46.227" endtime="20201101 16:30:46.824"></status>
 </kw>
 <kw name="Wait Until Page Contains" library="SeleniumLibrary">
 <doc>Waits until ``text`` appears on the current page.</doc>
 <arguments>
 <arg>หมวดหมู่สินค้า</arg>
 </arguments>
-<status status="PASS" starttime="20201101 15:53:18.053" endtime="20201101 15:53:19.139"></status>
+<status status="PASS" starttime="20201101 16:30:46.825" endtime="20201101 16:30:48.041"></status>
 </kw>
-<status status="PASS" starttime="20201101 15:53:09.967" endtime="20201101 15:53:19.140" critical="yes"></status>
-</test>
-<test id="s1-t2" name="Search for iPhone 11 product and view">
+<status status="PASS" starttime="20201101 16:30:42.738" endtime="20201101 16:30:48.042"></status>
+</kw>
+<kw name="Search for products">
 <kw name="Click Element" library="SeleniumLibrary">
 <doc>Click the element identified by ``locator``.</doc>
 <arguments>
 <arg>xpath=/html/body/div[2]/div[3]/div/div[3]/div/div[1]/div[2]/div[2]/div[2]/div[2]/div[2]</arg>
 </arguments>
-<msg timestamp="20201101 15:53:19.149" level="INFO">Clicking element 'xpath=/html/body/div[2]/div[3]/div/div[3]/div/div[1]/div[2]/div[2]/div[2]/div[2]/div[2]'.</msg>
-<status status="PASS" starttime="20201101 15:53:19.148" endtime="20201101 15:53:19.332"></status>
+<msg timestamp="20201101 16:30:48.044" level="INFO">Clicking element 'xpath=/html/body/div[2]/div[3]/div/div[3]/div/div[1]/div[2]/div[2]/div[2]/div[2]/div[2]'.</msg>
+<status status="PASS" starttime="20201101 16:30:48.043" endtime="20201101 16:30:48.190"></status>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <doc>Pauses the test executed for the given time.</doc>
 <arguments>
 <arg>3s</arg>
 </arguments>
-<msg timestamp="20201101 15:53:22.335" level="INFO">Slept 3 seconds</msg>
-<status status="PASS" starttime="20201101 15:53:19.334" endtime="20201101 15:53:22.336"></status>
+<msg timestamp="20201101 16:30:51.195" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20201101 16:30:48.191" endtime="20201101 16:30:51.195"></status>
 </kw>
 <kw name="Click Image" library="SeleniumLibrary">
 <doc>Clicks an image identified by ``locator``.</doc>
 <arguments>
 <arg>iPhone 11 Pro (64GB)</arg>
 </arguments>
-<msg timestamp="20201101 15:53:22.338" level="INFO">Clicking image 'iPhone 11 Pro (64GB)'.</msg>
-<status status="PASS" starttime="20201101 15:53:22.337" endtime="20201101 15:53:22.516"></status>
+<msg timestamp="20201101 16:30:51.197" level="INFO">Clicking image 'iPhone 11 Pro (64GB)'.</msg>
+<status status="PASS" starttime="20201101 16:30:51.196" endtime="20201101 16:30:51.388"></status>
 </kw>
 <kw name="Wait Until Page Contains" library="SeleniumLibrary">
 <doc>Waits until ``text`` appears on the current page.</doc>
 <arguments>
 <arg>iPhone 11 Pro (64GB)</arg>
 </arguments>
-<status status="PASS" starttime="20201101 15:53:22.517" endtime="20201101 15:53:22.597"></status>
+<status status="PASS" starttime="20201101 16:30:51.389" endtime="20201101 16:30:51.483"></status>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <doc>Pauses the test executed for the given time.</doc>
 <arguments>
 <arg>3s</arg>
 </arguments>
-<msg timestamp="20201101 15:53:25.598" level="INFO">Slept 3 seconds</msg>
-<status status="PASS" starttime="20201101 15:53:22.598" endtime="20201101 15:53:25.599"></status>
+<msg timestamp="20201101 16:30:54.484" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20201101 16:30:51.483" endtime="20201101 16:30:54.484"></status>
 </kw>
-<status status="PASS" starttime="20201101 15:53:19.146" endtime="20201101 15:53:25.600" critical="yes"></status>
-</test>
-<test id="s1-t3" name="Add iPhone11 to cart checkout">
+<status status="PASS" starttime="20201101 16:30:48.042" endtime="20201101 16:30:54.486"></status>
+</kw>
+<kw name="Add product and checkout">
 <kw name="Click Element" library="SeleniumLibrary">
 <doc>Click the element identified by ``locator``.</doc>
 <arguments>
 <arg>xpath=/html/body/div[2]/div[3]/div/div[1]/div/div[2]/div[2]/div/div[7]/div[2]/button</arg>
 </arguments>
-<msg timestamp="20201101 15:53:25.607" level="INFO">Clicking element 'xpath=/html/body/div[2]/div[3]/div/div[1]/div/div[2]/div[2]/div/div[7]/div[2]/button'.</msg>
-<status status="PASS" starttime="20201101 15:53:25.607" endtime="20201101 15:53:25.689"></status>
+<msg timestamp="20201101 16:30:54.487" level="INFO">Clicking element 'xpath=/html/body/div[2]/div[3]/div/div[1]/div/div[2]/div[2]/div/div[7]/div[2]/button'.</msg>
+<status status="PASS" starttime="20201101 16:30:54.487" endtime="20201101 16:30:54.572"></status>
 </kw>
 <kw name="Wait Until Page Contains" library="SeleniumLibrary">
 <doc>Waits until ``text`` appears on the current page.</doc>
@@ -104,39 +116,39 @@
 <arg>ขั้นตอนการสั่งซื้อ</arg>
 <arg>timeout=10</arg>
 </arguments>
-<status status="PASS" starttime="20201101 15:53:25.690" endtime="20201101 15:53:27.238"></status>
+<status status="PASS" starttime="20201101 16:30:54.574" endtime="20201101 16:30:56.316"></status>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <doc>Pauses the test executed for the given time.</doc>
 <arguments>
 <arg>10s</arg>
 </arguments>
-<msg timestamp="20201101 15:53:37.241" level="INFO">Slept 10 seconds</msg>
-<status status="PASS" starttime="20201101 15:53:27.238" endtime="20201101 15:53:37.242"></status>
+<msg timestamp="20201101 16:31:06.317" level="INFO">Slept 10 seconds</msg>
+<status status="PASS" starttime="20201101 16:30:56.317" endtime="20201101 16:31:06.318"></status>
 </kw>
 <kw name="Click Element" library="SeleniumLibrary">
 <doc>Click the element identified by ``locator``.</doc>
 <arguments>
 <arg>xpath=/html/body/div[2]/div[3]/div/div[4]/div[2]/div/div[2]/div[2]/button</arg>
 </arguments>
-<msg timestamp="20201101 15:53:37.243" level="INFO">Clicking element 'xpath=/html/body/div[2]/div[3]/div/div[4]/div[2]/div/div[2]/div[2]/button'.</msg>
-<status status="PASS" starttime="20201101 15:53:37.243" endtime="20201101 15:53:37.296"></status>
+<msg timestamp="20201101 16:31:06.320" level="INFO">Clicking element 'xpath=/html/body/div[2]/div[3]/div/div[4]/div[2]/div/div[2]/div[2]/button'.</msg>
+<status status="PASS" starttime="20201101 16:31:06.319" endtime="20201101 16:31:06.372"></status>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <doc>Pauses the test executed for the given time.</doc>
 <arguments>
 <arg>10s</arg>
 </arguments>
-<msg timestamp="20201101 15:53:47.298" level="INFO">Slept 10 seconds</msg>
-<status status="PASS" starttime="20201101 15:53:37.297" endtime="20201101 15:53:47.299"></status>
+<msg timestamp="20201101 16:31:16.376" level="INFO">Slept 10 seconds</msg>
+<status status="PASS" starttime="20201101 16:31:06.373" endtime="20201101 16:31:16.376"></status>
 </kw>
 <kw name="Click Element" library="SeleniumLibrary">
 <doc>Click the element identified by ``locator``.</doc>
 <arguments>
 <arg>xpath=/html/body/div[2]/div[3]/div/div[4]/div[1]/div[1]/div/div/button[2]</arg>
 </arguments>
-<msg timestamp="20201101 15:53:47.301" level="INFO">Clicking element 'xpath=/html/body/div[2]/div[3]/div/div[4]/div[1]/div[1]/div/div/button[2]'.</msg>
-<status status="PASS" starttime="20201101 15:53:47.300" endtime="20201101 15:53:47.376"></status>
+<msg timestamp="20201101 16:31:16.379" level="INFO">Clicking element 'xpath=/html/body/div[2]/div[3]/div/div[4]/div[1]/div[1]/div/div/button[2]'.</msg>
+<status status="PASS" starttime="20201101 16:31:16.378" endtime="20201101 16:31:16.451"></status>
 </kw>
 <kw name="Wait Until Page Contains" library="SeleniumLibrary">
 <doc>Waits until ``text`` appears on the current page.</doc>
@@ -144,38 +156,32 @@
 <arg>ขั้นตอนการสั่งซื้อ</arg>
 <arg>timeout=10</arg>
 </arguments>
-<status status="PASS" starttime="20201101 15:53:47.377" endtime="20201101 15:53:47.404"></status>
+<status status="PASS" starttime="20201101 16:31:16.452" endtime="20201101 16:31:16.462"></status>
 </kw>
-<kw name="Sleep" library="BuiltIn">
-<doc>Pauses the test executed for the given time.</doc>
-<arguments>
-<arg>10s</arg>
-</arguments>
-<msg timestamp="20201101 15:53:57.407" level="INFO">Slept 10 seconds</msg>
-<status status="PASS" starttime="20201101 15:53:47.405" endtime="20201101 15:53:57.408"></status>
+<status status="PASS" starttime="20201101 16:30:54.486" endtime="20201101 16:31:16.463"></status>
 </kw>
 <kw name="Close Browser" library="SeleniumLibrary" type="teardown">
 <doc>Closes the current browser.</doc>
-<status status="PASS" starttime="20201101 15:53:57.409" endtime="20201101 15:53:57.619"></status>
+<status status="PASS" starttime="20201101 16:31:16.464" endtime="20201101 16:31:16.675"></status>
 </kw>
-<status status="PASS" starttime="20201101 15:53:25.606" endtime="20201101 15:53:57.620" critical="yes"></status>
+<tags>
+<tag>Debug</tag>
+</tags>
+<status status="PASS" starttime="20201101 16:30:39.365" endtime="20201101 16:31:16.675" critical="yes"></status>
 </test>
-<doc>A resource file with reusable keywords and variables.
-
-The system specific keywords created here form our own
-domain specific language. They utilize keywords provided
-by the imported SeleniumLibrary.</doc>
-<status status="PASS" starttime="20201101 15:53:09.554" endtime="20201101 15:53:57.624"></status>
+<doc>Suite description</doc>
+<status status="PASS" starttime="20201101 16:30:39.135" endtime="20201101 16:31:16.682"></status>
 </suite>
 <statistics>
 <total>
-<stat pass="3" fail="0">Critical Tests</stat>
-<stat pass="3" fail="0">All Tests</stat>
+<stat pass="1" fail="0">Critical Tests</stat>
+<stat pass="1" fail="0">All Tests</stat>
 </total>
 <tag>
+<stat pass="1" fail="0">Debug</stat>
 </tag>
 <suite>
-<stat pass="3" fail="0" id="s1" name="trueStore purchase test">trueStore purchase test</stat>
+<stat pass="1" fail="0" id="s1" name="trueStore purchase test 2">trueStore purchase test 2</stat>
 </suite>
 </statistics>
 <errors>

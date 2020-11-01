@@ -7,13 +7,13 @@ ${BROWSER}        chrome
 ${URL}            https://truemoveh.truecorp.co.th
 
 *** Test Cases ***
-Open site and navigate to online shop
+Add item from store to cart
    [Tags]   Debug
    Begin Web Test
    Go to online store
    Search for products
    Add product and checkout
-   End Web Test
+   [Teardown]    Close Browser
 
 *** Keywords ***
 Begin Web Test
@@ -42,7 +42,3 @@ Add product and checkout
     Sleep   10s
     Click Element   xpath=/html/body/div[2]/div[3]/div/div[4]/div[1]/div[1]/div/div/button[2]
     Wait Until Page Contains   ขั้นตอนการสั่งซื้อ    timeout=10
-    Sleep   10s
-
-End Web Test
-    [Teardown]    Close Browser
