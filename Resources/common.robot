@@ -1,13 +1,10 @@
 *** Settings ***
-Documentation    Suite description
+Library     SeleniumLibrary
 
-*** Test Cases ***
-Test title
-    [Tags]    DEBUG
-    Provided precondition
-    When action
-    Then check expectations
 
 *** Keywords ***
-Provided precondition
-    Setup system under test
+Begin Web Test
+    Open Browser about:blank    ${BROWSER}
+
+End Web Test
+    Close Browser
