@@ -12,7 +12,8 @@ ${URL}            https://truemoveh.truecorp.co.th
 
 *** Test Cases ***
 Open site and navigate to online shop
-    Open Browser    ${URL}    ${BROWSER}
+    Open Browser    ${BROWSER}
+    Go To    ${URL}
     Maximize Browser Window
     Wait Until Page Contains   สั่งซื้อออนไลน์
     Mouse Over   xpath=/html/body/section[1]/header/nav/nav/ul/li[4]/a
