@@ -11,7 +11,7 @@ ${BROWSER}        chrome
 ${URL}            https://truemoveh.truecorp.co.th
 
 *** Test Cases ***
-Add iPhone11 to cart checkout
+Open site and navigate to online shop
     Open Browser    ${URL}    ${BROWSER}
     Maximize Browser Window
     Wait Until Page Contains   สั่งซื้อออนไลน์
@@ -21,11 +21,15 @@ Add iPhone11 to cart checkout
 #    Input Text   xpath=/html/body/div[2]/div[3]/div/div[3]/div/div[2]/div[1]/div/input    iPhone11
 #    Click Element   xpath=/html/body/div[2]/div[3]/div/div[3]/div/div[2]/div[1]/button
 #    Press Keys   xpath=/html/body/div[2]/div[3]/div/div[3]/div/div[2]/div[1]/div/input    RETURN
+
+Search for iPhone 11 product and view
     Click Element   xpath=/html/body/div[2]/div[3]/div/div[3]/div/div[1]/div[2]/div[2]/div[2]/div[2]/div[2]
     Sleep   3s
     Click Image   iPhone 11 Pro (64GB)
     Wait Until Page Contains   iPhone 11 Pro (64GB)
     Sleep   3s
+
+Add iPhone11 to cart checkout
     Click Element   xpath=/html/body/div[2]/div[3]/div/div[1]/div/div[2]/div[2]/div/div[7]/div[2]/button
     Wait Until Page Contains   ขั้นตอนการสั่งซื้อ    timeout=10
     Sleep   10s
