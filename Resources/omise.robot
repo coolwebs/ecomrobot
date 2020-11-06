@@ -10,12 +10,6 @@ ${CARD_EXP_YEAR}     2024
 ${CARD_CCV}     569
 
 *** Keywords ***
-Add bose earbuds to cart
-    Click Link  xpath=//*[@id="wc-column-container"]/ul/li[9]/a[1]
-    Wait Until Page Contains    Bose Soundsport free wireless
-    Click Button  class=single_add_to_cart_button
-    Wait Until Page Contains    Subtotal: ฿4,400.00
-
 Select omise payment option
     Click Element   xpath=//*[@id="payment"]/ul/li[5]
 

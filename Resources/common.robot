@@ -5,6 +5,7 @@ Library     SeleniumLibrary
 *** Variables ***
 ${URL}  https://robot-commerce.local/
 ${BROWSER}      chrome
+
 ${FIRSTNAME}    John
 ${LASTNAME}     Appleseed
 ${COUNTRY}      Thailand
@@ -14,6 +15,20 @@ ${STATE}    Bangkok
 ${POSTCODE}     10500
 ${PHONE}    0953459872
 ${EMAIL}    coolwebs81@gmail.com
+
+${F_FIRSTNAME}    Sally
+${F_LASTNAME}     Fletcher
+${F_STREET}       Sign Condo Sukhumvit 50, ซอย แสงอุทัย แขวง พระโขนง เขตคลองเตย กรุงเทพมหานคร
+${F_POSTCODE}     10206
+${F_PHONE}    0863879245
+${F_EMAIL}    info@coolwebs.com.au
+
+${A_FIRSTNAME}    Adrian
+${A_LASTNAME}     Anderson
+${A_STREET}       Sign Condo Sukhumvit 50, ซอย แสงอุทัย แขวง พระโขนง เขตคลองเตย กรุงเทพมหานคร
+${A_POSTCODE}     10750
+${A_PHONE}    0899980348
+${A_EMAIL}    ryan.archer@truedigital.com
 
 *** Keywords ***
 Begin Web Test
@@ -29,32 +44,50 @@ Go to store page
 View checkout
     Click Link  xpath=//*[@id="woocommerce_widget_cart-2"]/div/p[2]/a[1]
 
+Add product to cart
+    Click Link    class=add_to_cart_button
+
 Go to checkout
-    Click Link  class=wc-forward
-    Wait Until Page Contains    Cart
-    Click Link  class=checkout-button
-    Wait Until Page Contains    Checkout
+    Click Link  xpath=//*[@id="woocommerce_widget_cart-2"]/div/p[2]/a[2]
     Sleep   1s
     Input Text    billing_first_name    ${FIRSTNAME}
     Input Text    billing_last_name    ${LASTNAME}
 
-#    complete country select menu
-#    Click Element   id=select2-billing_country-container
-#    Click Element   id=select2-billing_country-result-y0l8-TH
-
     Input Text    billing_address_1    ${STREET}
     Input Text    billing_city    ${CITY}
-
-#    complete state select menu
-#    Click Element   id=select2-billing_state-container
-#    Click Element   id=select2-billing_state-result-difn-TH-10
 
     Input Text    billing_postcode    ${POSTCODE}
     Input Text    billing_phone    ${PHONE}
     Input Text    billing_email    ${EMAIL}
-#    Click Element   xpath=//*[@id="payment"]/ul/li[4]/label
-#    Click Element   css=#payment > ul > li.wc_payment_method.payment_method_paypal > label
     sleep   3s
+
+Sally checkout details
+
+    Input Text    billing_first_name    ${F_FIRSTNAME}
+    Input Text    billing_last_name    ${F_LASTNAME}
+
+    Input Text    billing_address_1    ${F_STREET}
+    Input Text    billing_city    ${CITY}
+
+    Input Text    billing_postcode    ${F_POSTCODE}
+    Input Text    billing_phone    ${F_PHONE}
+    Input Text    billing_email    ${F_EMAIL}
+    sleep   3s
+
+Adrian customer details
+    Input Text    billing_first_name    ${A_FIRSTNAME}
+    Input Text    billing_last_name    ${A_LASTNAME}
+
+    Input Text    billing_address_1    ${A_STREET}
+    Input Text    billing_city    ${CITY}
+
+    Input Text    billing_postcode    ${A_POSTCODE}
+    Input Text    billing_phone    ${A_PHONE}
+    Input Text    billing_email    ${A_EMAIL}
+    sleep   3s
+
+Create an account
+    Click Element   id=createaccount
 
 Proceed to checkout
     Click Link    xpath=//*[@id="post-6"]/div/div/div/div[2]/div/div/a

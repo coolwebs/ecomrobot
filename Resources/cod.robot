@@ -4,5 +4,5 @@ Library     SeleniumLibrary
 
 *** Keywords ***
 Select COD payment option
-    Click Element   xpath=//*[@id="payment"]/ul/li[1]
-
+    Sleep   3s
+    Click Element   xpath=//*[@id="payment"]/ul/li[2]
