@@ -9,21 +9,25 @@ Add smartphone to cart
     Click Link  xpath=//*[@id="menu-item-80"]/a
     Wait Until Page Contains    Samsung
     Click Link  xpath=//*[@id="wc-column-container"]/ul/li[4]/a[2]
+    Sleep   1s
 
 Add phone case to cart
-    Mouse Over   xpath=//*[@id="menu-item-85"]/a
-    Click Link  xpath=//*[@id="menu-item-86"]/a
+    Mouse Over   css=#menu-item-85 > a
+    Click Link  css=#menu-item-86 > a
     Wait Until Page Contains    Phone cases
     Click Link  xpath=//*[@id="wc-column-container"]/ul/li/a[2]
+    Sleep   1s
 
 Add beats audio to cart
-    Mouse Over   xpath=//*[@id="menu-item-124"]/a
-    Click Link  xpath=//*[@id="menu-item-125"]/a
+    Mouse Over   css=#menu-item-124 > a
+    Click Link  css=#menu-item-125 > a
     Wait Until Page Contains    Beats
     Click Link  xpath=//*[@id="wc-column-container"]/ul/li[2]/a[2]
+    Sleep   1s
 
 Add samsung smartwatch to cart
-    Mouse Over   xpath=//*[@id="menu-item-82"]/a
-    Click Link  xpath=//*[@id="menu-item-84"]/a
+    Mouse Over   css=#menu-item-82 > a
+    Click Link  css=#menu-item-84 > a
     Wait Until Page Contains    Samsung
     Click Link  xpath=//*[@id="wc-column-container"]/ul/li/a[2]
+    Sleep   1s

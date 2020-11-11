@@ -1,5 +1,5 @@
 *** Settings ***
-Documentation    Purchase tests from the robocommerce store (demo built with Wordpress and Woo Commerce
+Documentation    Purchase tests from the robocommerce store (demo built with Wordpress and Woo Commerce)
 Library          SeleniumLibrary
 Resource    ../Resources/common.robot
 Resource    ../Resources/adding_products.robot
@@ -18,7 +18,7 @@ Resource    ../Resources/check_order.robot
 *** Test Cases ***
 Purchase product with paypal
     [Documentation]     Customer will select a product from the list and add it to cart. Then make checkout and pay with Paypal.
-    [Tags]    DEBUG
+    [Tags]    PAYMENTS
     Begin Web Test
     Go to store page
     Add Apple Watch to cart
@@ -30,7 +30,7 @@ Purchase product with paypal
 
 Purchase product with omise card
     [Documentation]     Customer will select a product from the list and add it to cart. Then make checkout and pay with Stripe.
-    [Tags]    DEBUG
+    [Tags]    PAYMENTS
     Begin Web Test
     Go to store page
     Add bose earbuds to cart
@@ -42,7 +42,7 @@ Purchase product with omise card
 
 Search for product and add to cart
     [Documentation]     Customer uses product search to locate item and add it to the cart
-    [Tags]    DEBUG
+    [Tags]    SEARCH
     Begin Web Test
     Go to store page
     Search for product
@@ -51,13 +51,13 @@ Search for product and add to cart
 
 Apply discount coupon
     [Documentation]     Specific information about the test
-    [Tags]    DEBUG
+    [Tags]    COUPON
     Apply 15% coupon code
     Proceed to checkout
 
 Purchase discount item with COD
     [Documentation]     Purchase the product in cart with COD payment method
-    [Tags]    DEBUG
+    [Tags]    PAYMENTS
     Adrian customer details
     Select COD payment option
     Place order
@@ -65,7 +65,7 @@ Purchase discount item with COD
 
 Add multiple products to cart
     [Documentation]     Add multiple shop items to the cart
-    [Tags]    DEBUG
+    [Tags]    CART
     Begin Web Test
     Go to store page
     Add smartphone to cart
@@ -75,27 +75,28 @@ Add multiple products to cart
 
 Remove some items from cart
     [Documentation]     Remove some product items from the shopping cart
-    [Tags]    DEBUG
+    [Tags]    CART
     Remove products
 
 Complete checkout with multiple items
     [Documentation]     Complete the checkout and pay for all items using paypal method
-    [Tags]    DEBUG
+    [Tags]    CART
     Go multi product checkout
     Adrian customer details
-    Select paypal payment option
+    Select omise payment option
+    Make card payment with omise
     Place order
-    Login into paypal and pay
+    Finish Omise payment
 
 Submit contact form
     [Documentation]     Navigate to contact page and submit enquiry
-    [Tags]    DEBUG
+    [Tags]    CONTACT
     Complete contact form
     End Web Test
 
 Purchase a product that has a variation
     [Documentation]     Add a product variation to cart and go to checkout
-    [Tags]    DEBUG
+    [Tags]    VARIATIONS
     Begin Web Test
     Go to store page
     Select product variation
@@ -108,16 +109,17 @@ Purchase a product that has a variation
 
 Save customer details when checkout
     [Documentation]     Save the customer details when do checkout and payment with paypal
-    [Tags]    DEBUG
+    [Tags]    MEMBER
     Create an account
-    Select paypal payment option
+    Select omise payment option
+    Make card payment with omise
     Place order
-    Login into paypal and pay
+    Finish Omise payment
     End Web Test
 
 Complete a member checkout
     [Documentation]     User logs in to their account uses it to make their purchase quickly
-    [Tags]    DEBUG
+    [Tags]    MEMBER
     Begin Web Test
     Go to store page
     Add wearable product to cart
@@ -129,7 +131,7 @@ Complete a member checkout
 
 Customer login to check order
     [Documentation]     Customer login to the website to check on status of their order
-    [Tags]    DEBUG
+    [Tags]    MEMBER
     Begin Web Test
     Go to store page
     Customer login to account
@@ -137,7 +139,7 @@ Customer login to check order
 
 Customer cancel product order
     [Documentation]     Customer go into the backend portal and cancel their order
-    [Tags]    DEBUG
+    [Tags]    MEMBER
     Cancel order
     Customer logout
     End Web Test

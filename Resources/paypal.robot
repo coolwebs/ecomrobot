@@ -11,6 +11,8 @@ Select paypal payment option
     Click Element   xpath=//*[@id="payment"]/ul/li[3]
 
 Login into paypal and pay
+#    Wait Until Page Contains    PayPal is the safer, faster way to pay
+#    Click Link  link=Not you?
     Wait Until Page Contains    Log in to PayPal
     Input Text    email    ${PAYPAL_USER}
     Input Text    password    ${PAYPAL_PSWD}

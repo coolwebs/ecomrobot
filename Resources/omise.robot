@@ -12,6 +12,7 @@ ${CARD_CCV}     569
 *** Keywords ***
 Select omise payment option
     Click Element   xpath=//*[@id="payment"]/ul/li[5]
+    Sleep   1s
 
 Make card payment with omise
     Input Text    omise_card_number    ${CARD_NUM}
@@ -24,3 +25,6 @@ Make card payment with omise
     Sleep   1s
     Input Text    omise_card_security_code    ${CARD_CCV}
     Sleep   1s
+
+Finish Omise payment
+    Wait Until Page Contains    Order received
