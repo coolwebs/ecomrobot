@@ -37,7 +37,7 @@ Begin Web Test
 Go to store page
     Go To    ${URL}
     Maximize Browser Window
-    Wait Until Page Contains   Home
+    Wait Until Page Contains   Featured Apple Products
     Click Link   xpath=//*[@id="menu-item-133"]/a
     Wait Until Page Contains   Shop
 

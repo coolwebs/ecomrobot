@@ -38,6 +38,7 @@ Purchase product with omise card
     Select omise payment option
     Make card payment with omise
     Place order
+    Finish Omise payment
     End Web Test
 
 Search for product and add to cart

@@ -34,3 +34,5 @@ Open site and navigate to online shop
     Wait Until Page Contains   ขั้นตอนการสั่งซื้อ    timeout=10
     Sleep   10s
     [Teardown]    Close Browser
+
+store.truecorp.co.th/cart|store.truecorp.co.th/online-store/privilege/verify/|store.truecorp.co.th/online-store/bundle|store.truecorp.co.th/online-store/verify

@@ -10,6 +10,7 @@ ${CONTACT_MSG}  Hello there. I would like to make an enquiry about the product x
 *** Keywords ***
 Complete contact form
     Click Element   class=contact-page
+    Wait Until Page Contains    Message
     Input Text    nf-field-1   ${CONTACT_NAME}
     Input Text    nf-field-2   ${CONTACT_EMAIL}
     Input Text    nf-field-3   ${CONTACT_MSG}
