@@ -20,9 +20,9 @@ Allure is a great 'plug and play' tool that will help you visualise your test re
 For Mac OSX, use the brew command brew install allure 
 For Linux use:
 
-`sudo apt-add-repository ppa:qameta/allure \
-sudo apt-get update 
-sudo apt-get install allure`
+`sudo apt-add-repository ppa:qameta/allure` \
+`sudo apt-get update` \
+`sudo apt-get install allure` \
 
 1. If you are using IDE to run tests locally it may ignore Allure configuration specified in build file (as IntelliJ IDEA does). In order to make it work consider using allure.properties file to configure Allure. Check out configuration section for more information.
 2. Check that brew installed allure properly by using allure --version
