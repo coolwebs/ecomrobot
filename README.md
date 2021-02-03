@@ -20,7 +20,7 @@ Allure is a great 'plug and play' tool that will help you visualise your test re
 For Mac OSX, use the brew command brew install allure 
 For Linux use:
 
-`sudo apt-add-repository ppa:qameta/allure
+`sudo apt-add-repository ppa:qameta/allure \
 sudo apt-get update 
 sudo apt-get install allure`
 
