@@ -1,5 +1,6 @@
 .DS_Store
 Results/*
+venv
 output
 selenium-screenshot*
 output.xml
