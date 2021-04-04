@@ -6,7 +6,7 @@ Recommend going to the Web Demo and downloading this package from GitHub to get 
 
 1. Set up the new Python project and create VENV `python3 -m venv env` following recommended best practice
 2. Activate our virtual environment - source `env/bin/activate`. Can skip all this if using PyCharm.
-3. Install the robot framework using the `pip package manager pip install robotframework`
+3. Install the robot framework using the pip package manager `pip install robotframework`
 4. Install the selenium library for robot framework `pip install robotframework-selenium2library`
 5. If using PyCharm IDE, look for the intellibot plugin and install it so it can do syntax highlighting for .robot files. Can install using terminal also
 6. Super TIP! When you start up and run the test server, you will need to open up a new terminal tab/window. By default, you will not have the venv activated. You need to repeat step 2 again.
